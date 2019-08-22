@@ -1,0 +1,16 @@
+{
+  "name": "interdb",
+  "version": "1.0.0",
+  "description": "Handler for multiple named SQL connection pools.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Joshua Piper",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://git.doctor-internet.dev/internet/node-interdb.git"
+  }
+}
