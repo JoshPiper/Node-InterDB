@@ -12,5 +12,8 @@
   "repository": {
     "type": "git",
     "url": "https://git.doctor-internet.dev/internet/node-interdb.git"
+  },
+  "dependencies": {
+    "interenv": "git+https://git.doctor-internet.dev/internet/node-interenv.git"
   }
 }
