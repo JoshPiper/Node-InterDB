@@ -6,7 +6,7 @@ doExport("InterDBError")
 doExport("ListDBHandler")
 
 try {
-	require("interenv")
+	require("@doctor_internet/interenv")
 	doExport("EnvDBHandler")
 } catch (e){
 	// Noop.

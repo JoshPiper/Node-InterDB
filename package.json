@@ -1,6 +1,6 @@
 {
 	"name": "interdb",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "Handler for multiple named SQL connection pools.",
 	"main": "index.js",
 	"scripts": {
@@ -17,7 +17,7 @@
 		"mysql2": "^1.6.5"
 	},
 	"optionalDependencies": {
-		"interenv": "git+https://git.doctor-internet.dev/internet/node-interenv.git"
+		"@doctor_internet/interenv": "0.*"
 	},
 	"devDependencies": {
 		"mocha": "^6.2.0"
