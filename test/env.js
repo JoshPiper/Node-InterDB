@@ -25,7 +25,7 @@ describe("EnvDBHandler", function(){
 				"DB_USER": "big_money_prince",
 				"DB_PORT": "3307",
 				"DB_API_DB": "money",
-				"DB_API_PASS": "mysecurepassword",
+				"DB_API_PASS": "${NODE_ENV}",
 				"DB_API_USER": ""
 			})
 			assert.deepStrictEqual(x.configs, {
@@ -37,7 +37,7 @@ describe("EnvDBHandler", function(){
 				api: {
 					host: 'nigeria',
 					port: 3307,
-					password: 'mysecurepassword',
+					password: 'test',
 					database: 'money'
 				}
 			})
