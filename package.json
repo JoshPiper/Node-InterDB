@@ -4,7 +4,8 @@
 	"description": "Handler for multiple named SQL connection pools.",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha"
+		"test": "mocha",
+		"readme": "common-readme > README.md"
 	},
 	"keywords": [],
 	"author": "Joshua Piper",
@@ -20,6 +21,7 @@
 		"@doctor_internet/interenv": "0.*"
 	},
 	"devDependencies": {
+		"common-readme": "^1.1.0",
 		"mocha": "^6.2.0"
 	}
 }
