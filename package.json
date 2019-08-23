@@ -1,6 +1,6 @@
 {
 	"name": "@doctor_internet/interdb",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Handler for multiple named SQL connection pools.",
 	"main": "index.js",
 	"scripts": {
@@ -18,7 +18,7 @@
 		"mysql2": "^1.6.5"
 	},
 	"optionalDependencies": {
-		"@doctor_internet/interenv": "^0.2.2"
+		"@doctor_internet/interenv": "^1.0.0"
 	},
 	"devDependencies": {
 		"common-readme": "^1.1.0",
