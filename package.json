@@ -4,7 +4,7 @@
 	"description": "Handler for multiple named SQL connection pools.",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "mocha"
 	},
 	"keywords": [],
 	"author": "Joshua Piper",
@@ -18,5 +18,8 @@
 	},
 	"optionalDependencies": {
 		"interenv": "git+https://git.doctor-internet.dev/internet/node-interenv.git"
+	},
+	"devDependencies": {
+		"mocha": "^6.2.0"
 	}
 }
