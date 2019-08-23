@@ -1,6 +1,6 @@
 {
 	"name": "@doctor_internet/interdb",
-	"version": "0.2.2",
+	"version": "1.0.0",
 	"description": "Handler for multiple named SQL connection pools.",
 	"main": "index.js",
 	"scripts": {
