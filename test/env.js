@@ -21,24 +21,24 @@ describe("EnvDBHandler", function(){
 			let x = new db({
 				"NODE_ENV": "test",
 				"DB_AUTO": "API",
-				"DB_HOST": "nigeria",
-				"DB_USER": "big_money_prince",
+				"DB_HOST": "db1.localhost",
+				"DB_USER": "db1user",
 				"DB_PORT": "3307",
-				"DB_API_DB": "money",
+				"DB_API_DB": "api",
 				"DB_API_PASS": "${NODE_ENV}",
-				"DB_API_USER": ""
+				"DB_API_USER": "api_user"
 			})
 			assert.deepStrictEqual(x.configs, {
 				default: {
-					host: 'nigeria',
-					user: 'big_money_prince',
+					host: 'db1.localhost',
+					user: 'db1user',
 					port: 3307
 				},
 				api: {
-					host: 'nigeria',
+					host: 'db1.localhost',
 					port: 3307,
 					password: 'test',
-					database: 'money'
+					database: 'api'
 				}
 			})
 		})
