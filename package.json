@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "mocha",
 		"readme": "common-readme > README.md",
-		"release": "npx semantic-release --dry-run"
+		"release": "npx semantic-release"
 	},
 	"keywords": [],
 	"author": "Joshua Piper",
