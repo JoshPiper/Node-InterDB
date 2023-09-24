@@ -38,7 +38,8 @@ describe("EnvDBHandler", function(){
 					host: 'db1.localhost',
 					port: 3307,
 					password: 'test',
-					database: 'api'
+					database: 'api',
+					user: 'api_user'
 				}
 			})
 		})
