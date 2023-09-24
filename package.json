@@ -16,7 +16,7 @@
 		"url": "https://github.com/JoshPiper/Node-InterDB.git"
 	},
 	"dependencies": {
-		"mysql2": "^1.7.0"
+		"mysql2": "^1.7.0 || ^2 || ^3"
 	},
 	"optionalDependencies": {
 		"@doctor_internet/interenv": "^1.0.0"
