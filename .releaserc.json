@@ -3,7 +3,7 @@
 		"master",
 		"main",
 		{
-			"name": "beta",
+			"name": "refactor/typescript",
 			"channel": "beta",
 			"prerelease": "beta"
 		}
