@@ -121,5 +121,3 @@ $ npm install @doctor_internet/interdb
 ## License
 
 MIT
-
-
