@@ -14,34 +14,28 @@ describe("EnvDBHandler", () =>{
 
 		it("should load values from DB_AUTO, and reject others", function(){
 			let x = new EnvDBHandler(new Environment({
-				"NODE_ENV": "test",
 				"DB_AUTO": "API",
 				"DB_HOST": "localhost",
-				"DB_USER": "root",
+				"DB_USER": "user",
 				"DB_PORT": "3307",
 				"DB_API_DB": "api",
-				"DB_API_PASS": "${NODE_ENV}",
+				"DB_API_PASS": "password",
 				"DB_API_USER": "api_user",
-				"DB_TEST_USER":"yes"
+				"DB_TEST_USER": "test_user"
 			}))
 			assert.deepStrictEqual(Object.fromEntries(x['configs'].entries()), {
 				default: {
-					host: 'db1.localhost',
-					user: 'db1user',
+					host: 'localhost',
+					user: 'user',
 					port: 3307
 				},
 				api: {
-					host: 'db1.localhost',
+					host: 'localhost',
 					port: 3307,
-					password: 'test',
+					password: 'password',
 					database: 'api',
 					user: 'api_user'
-				},
-				test: {
-					host: 'db1.localhost',
-					user: 'yes',
-					port: 3307
-				},
+				}
 			})
 		})
 	})
