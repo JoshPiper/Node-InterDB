@@ -21,8 +21,8 @@
 		"url": "https://github.com/JoshPiper/Node-InterDB.git"
 	},
 	"dependencies": {
-		"mysql2": "^1.7.0 || ^2 || ^3",
-		"@doctor_internet/interenv": "^1"
+		"@doctor_internet/interenv": "^3.0.0",
+		"mysql2": "^1.7.0 || ^2 || ^3"
 	},
 	"devDependencies": {
 		"@tsconfig/node-lts": "18.12.5",
