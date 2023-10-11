@@ -36,7 +36,7 @@ export default class EnvDBHandler extends ListDBHandler {
 			configs.set(
                 (key ? key : "default").toLowerCase(),
 				key ?
-					EnvDBHandler.makeConfig(environ.prefixed(`${key}_`), configs.get("default") ?? {}) :
+					EnvDBHandler.makeConfig(environ.prefixed(`${key}_`), configs.get("default")) :
                     EnvDBHandler.makeConfig(environ)
 			)
 		}
