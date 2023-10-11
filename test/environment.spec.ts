@@ -38,6 +38,36 @@ describe("EnvDBHandler", () =>{
 				}
 			})
 		})
+
+		it("should load all values when DB_AUTO is omitted", function(){
+			let x = new EnvDBHandler(new Environment({
+				"DB_HOST": "localhost",
+				"DB_USER": "user",
+				"DB_API_DB": "api",
+				"DB_API_PASS": "password",
+				"DB_API_USER": "api_user",
+				"DB_TEST_USER": "test_user"
+			}))
+			assert.deepStrictEqual(Object.fromEntries(x['configs'].entries()), {
+				default: {
+					host: 'localhost',
+					user: 'user',
+					port: 3306
+				},
+				api: {
+					host: 'localhost',
+					port: 3306,
+					password: 'password',
+					database: 'api',
+					user: 'api_user'
+				},
+				test: {
+					host: 'localhost',
+					user: 'test_user',
+					port: 3306
+				},
+			})
+		})
 	})
 
 	describe('#makeConfig', () => {
