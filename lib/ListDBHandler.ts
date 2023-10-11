@@ -54,7 +54,7 @@ class ListDBHandler {
 	 * @returns {boolean}
 	 */
 	has(key: string): boolean {
-		return this.hasConfig(key) || this.hasConfig(key)
+		return this.hasPool(key) || this.hasConfig(key)
 	}
 
 	/**
