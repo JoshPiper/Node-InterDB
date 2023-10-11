@@ -25,6 +25,9 @@ jobs:
           node-version: 20
       - name: Install Node Dependencies
         run: "npm install && npm install --no-save mysql2@${{ matrix.mysql-version }}"
+      - name: Install Types
+        if: "${{ matrix.mysql-version }} == 1"
+        run: "npm install --no-save github:types/npm-mysql2#v1.0.0"
       - name: Test
         run: npm run test:coverage
         continue-on-error: true
