@@ -86,6 +86,16 @@ class ListDBHandler {
 
 		return this.pools.get(key)!
 	}
+
+	/**
+	 * Set a config mapping.
+	 * @param key
+	 * @param options
+	 */
+	public set(key: string, options: PoolOptions): ListDBHandler {
+		this.configs.set(key, options)
+		return this
+	}
 }
 
 export default ListDBHandler
