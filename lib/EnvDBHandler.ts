@@ -1,4 +1,4 @@
-import {default as ListDBHandler, Configuration} from "./ListDBHandler"
+import {default as ListDBHandler} from "./ListDBHandler"
 import {Environment} from "@doctor_internet/interenv"
 import {PoolOptions} from "mysql2/promise";
 
