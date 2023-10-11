@@ -62,7 +62,7 @@ class ListDBHandler {
 	 * @param key
 	 * @returns {Pool}
 	 */
-	connect(key: string): Pool {
+	protected connect(key: string): Pool {
 		let config = this.configs.get(key)
 		if (config === undefined){
 			throw new Error("Bad key provided to connect()")
