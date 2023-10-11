@@ -6,7 +6,10 @@ on:
 
 jobs:
   test:
-    name: "Run Tests and Coverage"
+    strategy:
+      matrix:
+        mysql-version: [1, 2, 3]
+    name: "Run Tests and Coverage (mysql@${{ matrix.mysql-version }})"
     runs-on: "ubuntu-latest"
     permissions:
       contents: read
@@ -21,7 +24,7 @@ jobs:
         with:
           node-version: 20
       - name: Install Node Dependencies
-        run: npm install
+        run: "npm install && npm install --no-save mysql2@${{ matrix.mysql-version }}"
       - name: Test
         run: npm run test:coverage
         continue-on-error: true
