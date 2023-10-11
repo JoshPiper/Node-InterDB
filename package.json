@@ -42,7 +42,6 @@
 	"files": [
 		"index.js",
 		"index.d.ts",
-		"interenv.d.ts",
 		"./lib/EnvDBHandler.js",
 		"./lib/EnvDBHandler.d.ts",
 		"./lib/InterDBError.js",
