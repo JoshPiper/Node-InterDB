@@ -54,7 +54,7 @@ class ListDBHandler {
 	 * @returns {boolean}
 	 */
 	has(key: string): boolean {
-		return this.hasConfig(key) || this.hasConfig(key)
+		return this.hasPool(key) || this.hasConfig(key)
 	}
 
 	/**
@@ -62,7 +62,7 @@ class ListDBHandler {
 	 * @param key
 	 * @returns {Pool}
 	 */
-	connect(key: string): Pool {
+	protected connect(key: string): Pool {
 		let config = this.configs.get(key)
 		if (config === undefined){
 			throw new Error("Bad key provided to connect()")
@@ -85,6 +85,16 @@ class ListDBHandler {
 		}
 
 		return this.pools.get(key)!
+	}
+
+	/**
+	 * Set a config mapping.
+	 * @param key
+	 * @param options
+	 */
+	public set(key: string, options: PoolOptions): ListDBHandler {
+		this.configs.set(key, options)
+		return this
 	}
 }
 

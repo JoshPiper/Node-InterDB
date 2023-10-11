@@ -3,7 +3,8 @@
 	"version": "2.1.0",
 	"description": "Handler for multiple named SQL connection pools.",
 	"scripts": {
-		"test": "mocha",
+		"test": "mocha -r ts-node/register test/**/*.spec.ts",
+		"test:coverage": "nyc --reporter=lcov mocha --reporter json --reporter-option output=test-results.json -r ts-node/register test/**/*.spec.ts",
 		"readme": "common-readme > README.md",
 		"release": "npx semantic-release",
 		"dev": "npx tsc --watch",
@@ -20,15 +21,20 @@
 		"url": "https://github.com/JoshPiper/Node-InterDB.git"
 	},
 	"dependencies": {
-		"mysql2": "^1.7.0 || ^2 || ^3",
-		"@doctor_internet/interenv": "^1"
+		"@doctor_internet/interenv": "^3.0.0",
+		"mysql2": "^1.7.0 || ^2 || ^3"
 	},
 	"devDependencies": {
 		"@tsconfig/node-lts": "18.12.5",
+		"@types/chai": "^4.3.7",
+		"@types/mocha": "^10.0.2",
 		"@types/node": "^20.6.5",
+		"chai": "^4.3.10",
 		"common-readme": "^1.1.0",
-		"mocha": "^6.2.3",
+		"mocha": "^10.2.0",
+		"nyc": "^15.1.0",
 		"semantic-release": "^22.0.1",
+		"ts-node": "^10.9.1",
 		"typescript": "^5.2.2"
 	},
 	"main": "index.js",
@@ -36,7 +42,6 @@
 	"files": [
 		"index.js",
 		"index.d.ts",
-		"interenv.d.ts",
 		"./lib/EnvDBHandler.js",
 		"./lib/EnvDBHandler.d.ts",
 		"./lib/InterDBError.js",
