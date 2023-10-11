@@ -4,13 +4,12 @@ import {PoolOptions} from "mysql2/promise";
 
 export default class EnvDBHandler extends ListDBHandler {
 	constructor(environ: Environment | undefined = undefined){
-		if (environ === undefined){
-			environ = new Environment()
-		}
+		environ = environ === undefined ? (new Environment()) : environ
         environ = environ.prefixed("DB_")
 
 		let envs: Set<string> = new Set()
 		envs.add("")
+
 		if (environ.has("AUTO")){
             environ.csv("AUTO").forEach(value => envs.add(value))
 		} else {
