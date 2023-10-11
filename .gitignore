@@ -3,5 +3,5 @@
 package-lock.json
 
 *.d.ts
-!interenv.d.ts
 *.js
+!release.config.js
